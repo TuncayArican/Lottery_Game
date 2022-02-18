@@ -29,6 +29,6 @@ numArray.push(joker)
 
 
 count++;
-result.innerHTML += `${numArray} <br>`
+result.innerHTML += `${numArray} <br> <br>`
 }
 });
