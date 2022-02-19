@@ -22,13 +22,19 @@ numArray.sort(function(a,b){return a-b})
 while(numArray.length<7){
     var sub=Math.floor(Math.random() * 90) + 1;
     if(numArray.includes(sub) != true){
-        numArray.push(sub)}
+        numArray.push(" | "+ sub + " | ")}
 }
 var joker=Math.floor(Math.random() * 90) + 1
 numArray.push(joker)
 
 
 count++;
-result.innerHTML += `${numArray} <br> <br>`
+let ul = document.querySelector("ul");
+ul.style.listStyle="none"
+ul.style.margin="1rem"
+let li = document.createElement("li");
+li.style.margin="1rem";
+li.innerText =`${numArray}`
+ul.appendChild(li);
 }
 });
